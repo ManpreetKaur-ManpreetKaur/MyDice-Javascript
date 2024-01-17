@@ -14,14 +14,10 @@
 </header>
 <main>
     <h2>Roll the Dice</h2>
-    <p id="dice">
-        <img src="images/dice/side_1.png" alt="side 1">
-        <img src="images/dice/side_2.png" alt="side 2">
-        <img src="images/dice/side_3.png" alt="side 3">
-    </p>
-    <p>
+    <p id="dice_row"></p>
+    <p id="total_row">
         <span class="total_label">Total:</span>
-        <span id="total" class="total_number">6</span>
+        <span class="total_number">0</span>
     </p>
     <p>
         <label for="c">Number of Dice:</label>
@@ -37,7 +33,7 @@
         <button onclick="onRollDice()">Roll Dice</button>
     </p>
     <p>
-        <a href="#">Reset</a>
+        <a href="#" onclick="onReset()">Reset</a>
     </p>
 </main>
 <footer>

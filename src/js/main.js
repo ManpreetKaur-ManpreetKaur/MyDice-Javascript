@@ -1,3 +1,4 @@
+
 function getRandomDiceValue(){
     return 1 + Math.floor(6*Math.random());
 }
@@ -21,8 +22,8 @@ function diceImageTag(diceValue){
     return `<img src="images/dice/side_${diceValue}.png" alt="side ${diceValue}">`
 }
 
-const diceElement = document.getElementById("dice");
-const totalElement = document.getElementById("total");
+const diceRowElement = document.getElementById("dice_row");
+const totalNumberElement = document.querySelector(".total_number");
 const selectElement = document.querySelector("select");
 
 function onRollDice(){
@@ -31,8 +32,15 @@ function onRollDice(){
     for(let diceValue of rollData.values){
         diceTags += diceImageTag(diceValue);
     }
-    diceElement.innerHTML = diceTags;
-    totalElement.innerHTML = rollData.total.toString();
+    diceRowElement.innerHTML = diceTags;
+    totalNumberElement.innerHTML = rollData.total.toString();
 }
 
+function onReset(){
+    diceRowElement.innerHTML = "";
+    totalNumberElement.innerHTML = "0"
+    selectElement.selectedIndex = 2;
+    // return false to prevent default link behavior
+    return false;
+}
 
