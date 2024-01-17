@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="js/main.js" defer></script>
     <title>Dice Roller</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
     <p>
         <label for="c">Number of Dice:</label>
         <select id="c">
-            <option >1</option>
+            <option>1</option>
             <option>2</option>
             <option selected>3</option>
             <option>4</option>
@@ -33,7 +34,7 @@
         </select>
     </p>
     <p>
-        <button>Roll Dice</button>
+        <button onclick="onRollDice()">Roll Dice</button>
     </p>
     <p>
         <a href="#">Reset</a>
